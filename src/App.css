@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+html, body{
+  font-family: 'Montserrat', sans-serif;
+}
 .App {
   text-align: center;
 }
@@ -6,33 +12,237 @@
   height: 40vmin;
   pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navBarTop {
+  justify-content: flex-end;
+}
+.navBarTop .me-auto {
+  margin-right: 0 !important;
+}
+.navbar-nav .nav-link {
+  text-transform: uppercase;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-light .navbar-nav .nav-link {
+  color: #000 !important;
+  /* height: 48px; */
+  min-width: 60px;
+  text-align: center;
+}
+.navbar {
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.17);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.17);
+  box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.17);
+}
+.newsletterForm .form-control {
+  height: 45px;
+  background-color: red;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  display: inline-block;
+  background: rgb(255, 2, 102);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 2, 102, 1) 0%,
+    rgba(91, 96, 207, 1) 100%
+  );
+  padding-left: 16px;
+}
+.nav-pills .nav-link {
+  color: #fff;
+  border-radius: 0 !important;
+  font-family: "Karla", sans-serif;
+  /* margin-bottom: 11px; */
+  padding-left: 0;
+  font-size: 20px;
+}
+.comname{
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.mainWrap{
+  background: #000;
+}
+.body-content{
+  margin-top: 56px;
+  height: 100vh;
+}
+.left-nav {
+  background: #201f1f;
+  border-radius: 5px;
+  margin-top: 25px;
+  padding: 25px;
+} 
+.left-nav ul{
+  list-style: none;
+  padding: 0;
+}
+.left-nav ul li{
+  margin-bottom: 15px;
+}
+.left-nav ul li a{
+  text-decoration: none;
+  color: #706f6f;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+}
+.left-nav ul li a i{
+  margin-right: 8px;
+}
+.marketcap {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.market-cap-option span{
+  display: flex;
+  color: #878282;
+}
+.market-cap-option span i{
+ margin-right: 10px;
+}
+.market-cap-option span p{
+ margin: 0;
+ }
+.market-cap-option {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 33%;
+  margin-right: 17px;
+}
+.box {
+  border:1px solid #323a40;
+  padding: 8px 13px;
+  border-radius: 7px;
+  margin-top: 10px;
+  color: #5e5858;
+}
+
+.staking-wrap {
+  margin-top: 25px;
+ 
+}
+.staking-wrap h2{
+  font-size: 14px;
+  color: #c9c6c6;
+  font-weight: 700;
+}
+.market-cap-statistic-wrapper {
+  background: #13171a;
+  padding: 10px;
+  margin-top: 26px;
+  border-radius: 8px;
+}
+.staking-table th{
+  font-weight: 500;
+  font-size: 14px;
+}
+.staking-table td{
+  font-weight: 500;
+  font-size: 14px;
+}
+.navbar-light .navbar-brand {
+  color: rgb(247 247 247 / 90%);
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #c7c7c7 !important;
+  /* height: 48px; */
+  min-width: 60px;
+  text-align: center;
+}
+
+.calculator {
+  background: #13171a;
+  padding: 10px;
+  margin-top: 26px;
+  border-radius: 8px;
+}
+.calculator h2 {
+  color: #7a7e81;
+  font-size: 17px;
+  margin-bottom: 19px;
+  text-transform: uppercase;
+}
+.calculator-box h3 {
+  font-size: 14px;
+  text-align: center;
+  color: #595f64;
+}
+.returns {
+  border: 1px solid #323a40;
+  padding: 8px;
+  color: #53575a;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.days-wrap span{
+  background: #1c2124;
+  color: #4c555c;
+  padding: 5px 12px;
+  margin-right: 7px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.days-wrap {
+  margin-bottom: 15px;
+}
+.bal-box-g {
+  display: flex;
+  background: #1c2124;
+  margin-top: 17px;
+  color: #384146;
+  font-size: 12px;
+  justify-content: space-between;
+  padding: 8px;
+  border-radius: 5px;
+}
+span.active {
+  background: #ccc;
+}
+.bal-box-g h4 {
+  font-size: 14px;
+  margin: 0;
+}
+.bal-box-g h5 {
+  font-size: 14px;
+  margin: 0;
+}
+
+p.rwt {
+  font-size: 12px;
+  /* margin: 0; */
+  color: #4c4b4b;
+  margin-top: 4px;
+}
+.bh-bt{
+  display: flex;
+  align-self: center;
+}
+.fgh{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@media(max-width:767px){
+  .body-content{
+    height: 100%;
+  }
+  .marketcap {
+    flex-direction: column;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.market-cap-option {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-right: 17px;
+  margin-bottom: 15px;
+}
+.navbar-light .navbar-toggler {
+  background: #464b50;
+}
 }
