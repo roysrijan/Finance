@@ -325,5 +325,5 @@ p.rwt {
 }
 
 .bg-dark{
-  opacity: 0.5;
+  --bs-bg-opacity: 0.5 !important;
 }

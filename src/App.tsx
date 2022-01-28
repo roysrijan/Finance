@@ -9,7 +9,7 @@ import {
   NavDropdown,
   Table,
 } from "react-bootstrap";
-import logo from "./logo.svg";
+import logo from "./Fino_Finance_logo.png";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -29,8 +29,8 @@ function App() {
               <Navbar bg="dark" expand="lg" fixed="top">
                 <Container fluid>
                   <Navbar.Brand href="/">
-                    {/* <img src="/images/logo.png" alt="Spaceshift" /> */}
-                    <h2 className="comname">Company name</h2>
+                    <img src={logo} style={{"width": "100px", height: "30px"}} alt="" />
+                    {/* <h2 className="comname">Company name</h2> */}
                   </Navbar.Brand>
                   <Navbar.Toggle aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav" className="navBarTop">
