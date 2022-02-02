@@ -78,6 +78,7 @@ code {
 .select_wrap .option {
   display: flex;
   align-items: center;
+  margin: 1rem;
 }
 
 ul, ol {
@@ -86,4 +87,21 @@ ul, ol {
 
 li {
   text-align: -webkit-match-parent;
+}
+
+.iZgYlJ {
+  -webkit-box-align: center;
+  align-items: center;
+  height: 2.2rem;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: rgb(40, 145, 249);
+  color: rgb(255, 255, 255);
+  border-radius: 12px;
+  box-shadow: rgb(0 0 0 / 8%) 0px 6px 10px;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  padding: 0px 0.5rem;
 }

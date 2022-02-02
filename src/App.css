@@ -64,7 +64,7 @@ html, body{
 }
 .mainWrap{
   background: #000;
-  background-image: url('https://dashboard.portify.app/bg.9d07a93ad61627b54476.svg');
+  background-image: url('./bg.svg');
 }
 .body-content{
   margin-top: 56px;
