@@ -2,7 +2,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 html, body{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
 }
 .App {
   text-align: center;
@@ -64,17 +64,19 @@ html, body{
 }
 .mainWrap{
   background: #000;
-  background-image: url('./bg.svg');
+  background-image: url('./bg.jpg');
 }
 .body-content{
   margin-top: 56px;
   height: 100vh;
 }
 .left-nav {
-  background: #201f1f;
+  background: #161a1da6;
   border-radius: 5px;
   margin-top: 25px;
   padding: 25px;
+  border: 1px solid #23282c;
+  min-height: 397px;
 } 
 .left-nav ul{
   list-style: none;
@@ -84,10 +86,12 @@ html, body{
   margin-bottom: 15px;
 }
 .left-nav ul li a{
+  /* color: #706f6f; */
   text-decoration: none;
-  color: #706f6f;
+  /* color: #706f6f; */
+  color: #4faba2;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 14px;
 }
 .left-nav ul li a i{
@@ -100,7 +104,7 @@ html, body{
 }
 .market-cap-option span{
   display: flex;
-  color: #878282;
+  color: #4faba2;
 }
 .market-cap-option span i{
  margin-right: 10px;
@@ -128,14 +132,16 @@ html, body{
 }
 .staking-wrap h2{
   font-size: 14px;
-  color: #c9c6c6;
+  color: #4a5460;
   font-weight: 700;
 }
 .market-cap-statistic-wrapper {
-  background: #13171a;
+  background: #070c1859;
   padding: 10px;
   margin-top: 26px;
   border-radius: 8px;
+  border: 1px solid #2a2e32;
+  min-height: 397px;
 }
 .staking-table th{
   font-weight: 500;
@@ -144,6 +150,7 @@ html, body{
 .staking-table td{
   font-weight: 500;
   font-size: 14px;
+  color: #455466;
 }
 .navbar-light .navbar-brand {
   color: rgb(247 247 247 / 90%);
@@ -156,13 +163,14 @@ html, body{
 }
 
 .calculator {
-  background: #13171a;
+  background: #13171a80;
   padding: 10px;
   margin-top: 26px;
   border-radius: 8px;
+  border: 1px solid #4a515a;
 }
 .calculator h2 {
-  color: #7a7e81;
+  color: #4faba2;
   font-size: 17px;
   margin-bottom: 19px;
   text-transform: uppercase;
@@ -174,15 +182,18 @@ html, body{
 }
 .returns {
   border: 1px solid #323a40;
-  padding: 8px;
+  padding: 13px 8px;
   color: #fff;
   text-align: center;
-  font-weight: 700;
+  font-weight: 400;
   margin-top: 10px;
   margin-bottom: 15px;
-  background-color: #323a40;
+  background-color: transparent;
   width: 100%;
+  border-radius: 6px;
+  font-size: 12px;
 }
+.returns:focus {outline: unset;}
 .days-wrap span{
   background: #1c2124;
   color: #4c555c;
@@ -190,15 +201,18 @@ html, body{
   margin-right: 7px;
   font-size: 12px;
   border-radius: 5px;
+  margin-bottom: 8px;
 }
 .days-wrap {
-  margin-bottom: 15px;
+  margin-bottom: 0;
   cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
 }
 .bal-box-g {
   display: flex;
   background: #1c2124;
-  margin-top: 17px;
+  margin-top: 5px;
   color: #384146;
   font-size: 12px;
   justify-content: space-between;
@@ -206,7 +220,9 @@ html, body{
   border-radius: 5px;
 }
 span.active {
-  background: #ccc;
+     /* background: #4faba2; */
+     color: #4faba2;
+     border: 1px solid #4faba2;
 }
 .bal-box-g h4 {
   font-size: 14px;
@@ -231,11 +247,20 @@ p.rwt {
   display: flex;
   justify-content: center;
 }
-
+.staking-table {
+  background: #1c1f244d;
+  border: 1px solid #333842;
+  border-radius: 5px;
+}
+.modal-content {
+  position: absolute !important;
+  top: 151px !important;
+  margin: 0 !important;
+}
 @media(max-width:767px){
-  .body-content{
+  /* .body-content{
   height: 100%;
-  }
+  } */
   .marketcap {
   flex-direction: column;
 }
@@ -248,6 +273,15 @@ p.rwt {
 }
 .navbar-light .navbar-toggler {
   background: #464b50;
+}
+.left-nav {
+  min-height: auto;
+}
+.presale{
+  width: 100%;
+}
+.mainWrap{
+  height: 100vh;
 }
 }
 
@@ -326,4 +360,18 @@ p.rwt {
 
 .bg-dark{
   --bs-bg-opacity: 0.5 !important;
+}
+.table-dark{
+  color: #373b3e !important;
+}
+.staking-table th {
+  font-weight: 500;
+  font-size: 14px;
+  color: #51565e;
+}
+.table-striped>tbody>tr:nth-of-type(odd)>*{
+  color: #4f5462 !important;
+}
+.table-hover>tbody>tr:hover>*{
+  color: #4f5462 !important;
 }

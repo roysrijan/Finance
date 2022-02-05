@@ -16,8 +16,8 @@ export default function Presale() {
                 </div> */}
                 <div className="calculator-box">
                     <div className="tab__typecontent">
-                        <h3>&nbsp;</h3>
-                        <div className="tab__form" style={{marginBottom: "35px"}}>
+                       
+                        <div className="tab__form" style={{marginBottom: "5px"}}>
                             <p>You Buy</p>
                             <div className="form__entry">
                                 <input type="text" id="qttinputid" defaultValue="1" />
@@ -43,7 +43,7 @@ export default function Presale() {
                                     </div>
                             </div>
                         </div>
-                        <div className="tab__form" style={{marginBottom: "18px"}}>
+                        <div className="tab__form" style={{marginBottom: "5px"}}>
                             <p>You Spend</p>
                             <div className="form__entry">
                                 <input type="text" value="300" readOnly />

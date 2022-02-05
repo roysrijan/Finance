@@ -33,12 +33,14 @@ code {
 }
 
 .presale {
-  background: #211739;
+  background: #1c202436;
   padding: 10px;
   margin-top: 26px;
   border-radius: 18px;
   width: 81%;
   color: aliceblue;
+  /* opacity: 0.8; */
+  border: 1px solid #424950;
   /* opacity: 0.8; */
 }
 
@@ -47,7 +49,7 @@ code {
   border: none;
   outline: none;
   color: #fff;
-  background: #28abe3;
+  background: #28e3da;
   padding: 12px;
   border-radius: 6px;
   font-weight: 600;
@@ -64,9 +66,10 @@ code {
   width: 241px;
   height: 46px;
   border-radius: 6px;
-  border: solid 1px #d1d9e5;
-  background-color: #fff;
+  border: solid 1px #42444c;
+  background-color: transparent;
   padding: 10px;
+  color: #fff;
 }
 
 .select_wrap {
@@ -90,18 +93,49 @@ li {
 }
 
 .iZgYlJ {
-  -webkit-box-align: center;
   align-items: center;
   height: 2.2rem;
   font-size: 20px;
   font-weight: 500;
-  background-color: rgb(40, 145, 249);
+  background-color: rgb(62 67 72);
   color: rgb(255, 255, 255);
   border-radius: 12px;
   box-shadow: rgb(0 0 0 / 8%) 0px 6px 10px;
   outline: none;
   cursor: pointer;
+  -webkit-user-select: none;
   user-select: none;
   border: none;
   padding: 0px 0.5rem;
+  font-size: 14px;
+}
+.tab__form p{
+  margin: 0;
+  font-size: 14px;
+}
+.default_option{
+  padding: 0;
+}
+
+@media(max-width:767px){
+  .form__entry {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.select_wrap .option {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+.form__entry input {
+  width: 100%;
+}
+.mainWrap{
+  min-height: 1313px;
+}
+.tab__form p {
+  margin: 8px 0;
+  font-size: 14px;
+}
 }
