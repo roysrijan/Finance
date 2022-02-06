@@ -57,13 +57,13 @@ function App() {
               <div className="left-nav">
                 <ul>
                   <li>
-                    <a href="/"><i className="fa fa-home" aria-hidden="true"></i>Home</a>
+                    <a className={window.location.pathname=='/'?"active":""} href="/"><i className="fa fa-home" aria-hidden="true"></i>Home</a>
                   </li>
                   <li>
                     <a href=""><i className="fa fa-adjust" aria-hidden="true"></i>Stake</a>
                   </li>
                   <li>
-                    <a href="/presale"><i className="fa fa-btc" aria-hidden="true"></i>Presale</a>
+                    <a className={window.location.pathname=='/presale'?"active":""} href="/presale"><i className="fa fa-btc" aria-hidden="true"></i>Presale</a>
                   </li>
                   <li>
                     <a href=""><i className="fa fa-list-alt" aria-hidden="true"></i>Todo</a>
