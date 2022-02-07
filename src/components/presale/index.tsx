@@ -16,11 +16,35 @@ export default function Presale() {
                 </div> */}
                 <div className="calculator-box">
                     <div className="tab__typecontent">
-                       
+                        <div className="tab__form" style={{marginBottom: "5px"}}>
+                            <p>You Spend</p>
+                            <div className="form__entry">
+                                <input type="text" value="1" />
+                                    <div className="wrapper__coin">
+                                        <div className="select_wrap">
+                                            <ul className="default_option">
+                                                <li>
+                                                    <div className="option pizza">
+                                                        <div className="">
+                                                            <select className='iZgYlJ'>
+                                                                <option value="">Select One</option>
+                                                                <option value="BNB">BNB</option>
+                                                                <option value="BUSD">BUSD</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+
+                                    </div>
+                            </div>
+                        </div>
                         <div className="tab__form" style={{marginBottom: "5px"}}>
                             <p>You Buy</p>
                             <div className="form__entry">
-                                <input type="text" id="qttinputid" defaultValue="1" />
+                                <input type="text" id="qttinputid" defaultValue="10" readOnly/>
                                     <div className="wrapper__coin">
                                         <div className="select_wrap ">
                                             <ul className="default_option">
@@ -43,31 +67,7 @@ export default function Presale() {
                                     </div>
                             </div>
                         </div>
-                        <div className="tab__form" style={{marginBottom: "5px"}}>
-                            <p>You Spend</p>
-                            <div className="form__entry">
-                                <input type="text" value="300" readOnly />
-                                    <div className="wrapper__coin">
-                                        <div className="select_wrap">
-                                            <ul className="default_option">
-                                                <li>
-                                                    <div className="option pizza">
-                                                        <div className="">
-                                                            <select className='iZgYlJ'>
-                                                                <option value="">Select One</option>
-                                                                <option value="BNB">BNB</option>
-                                                                <option value="BUSD">BUSD</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-
-                                        </div>
-
-                                    </div>
-                            </div>
-                        </div>
+                        
                         <button id="affiliate-download" className="cta__btn">{tab} FINO (INR) NOW </button>
                     </div>
                 </div>
