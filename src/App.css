@@ -64,18 +64,18 @@ html, body{
 }
 .mainWrap{
   background: #000;
-  background-image: url('./bg.jpg');
+  background-image: url('./back-desk-min.png');
 }
 .body-content{
   margin-top: 56px;
   height: 100vh;
 }
 .left-nav {
-  background: #161a1da6;
+  /* background: #161a1da6; */
   border-radius: 5px;
   margin-top: 25px;
   padding: 25px;
-  border: 1px solid #23282c;
+  /* border: 1px solid #23282c; */
   min-height: 397px;
 } 
 .left-nav ul{
@@ -89,7 +89,7 @@ html, body{
   /* color: #706f6f; */
   text-decoration: none;
   /* color: #706f6f; */
-  color: #4faba2;
+  color: #fff;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 14px;
@@ -140,8 +140,9 @@ html, body{
   padding: 10px;
   margin-top: 26px;
   border-radius: 8px;
-  border: 1px solid #2a2e32;
+  border: 1px solid rgba(19,207,207,.06666666666666667);
   min-height: 397px;
+  background: rgba(19,24,35,.3411764705882353);
 }
 .staking-table th{
   font-weight: 500;
