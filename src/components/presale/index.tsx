@@ -74,6 +74,8 @@ export default function Presale() {
 
                                     </div>
                             </div>
+                            <p style={{color: 'red'}}>{chan=='BNB' && (bal<0.05 || bal>50)? 'Min Buy: 0.05 BNB, Max Buy: 50 BNB': chan=='BUSD' && (bal<20 || bal>20000)?'Min Buy: 20 BUSD, Max Buy: 20000 BUSD':'' }</p>
+
                         </div>
                         <div className="tab__form" style={{marginBottom: "5px"}}>
                             <p>You Buy</p>
