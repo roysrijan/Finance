@@ -30,6 +30,7 @@ export default function Presale() {
     }
     const [bal, setBal] = useState(0);
     const [chan, setChan] = useState();
+    const [buyBUSD, setbuyBUSD] = useState(true);
     const { getBalances, data: balance, nativeToken } = useNativeBalance({ chain : "0x38" });
     const { enableWeb3, authenticate, isAuthenticated, user, logout } = useMoralis();
     const { switchNetwork, chainId, chain, account } = useChain();
@@ -106,10 +107,10 @@ export default function Presale() {
                         {chan=='BUSD' && (
                             <Row>
                                 <Col lg="6">
-                                <button id="affiliate-download" className="cta__btn" onClick={()=>fetch({params: {...optionsBUSD, params: {spender: '0x22Ad5eB9f2fD633CEc1fE5dBe3fdD5BD34a38c54', amount: "0x"+(bal*Math.pow(10,18)).toString(16)}}})} disabled={isFetching}> Approve </button>
+                                <button id="affiliate-download" className="cta__btn" onClick={()=>{fetch({params: {...optionsBUSD, params: {spender: '0x22Ad5eB9f2fD633CEc1fE5dBe3fdD5BD34a38c54', amount: "0x"+(bal*Math.pow(10,18)).toString(16)}}});setbuyBUSD(false)}} disabled={isFetching}> Approve </button>
                                 </Col>
                                 <Col lg="6">
-                                <button id="affiliate-download" className="cta__btn" onClick={()=>fetch({params: {...optionsBUYBUSD, params: { _busdAmount: "0x"+(bal*Math.pow(10,18)).toString(16)}}})} disabled={isFetching}>{tab} FINO NOW </button>
+                                <button id="affiliate-download" className="cta__btn" onClick={()=>fetch({params: {...optionsBUYBUSD, params: { _busdAmount: "0x"+(bal*Math.pow(10,18)).toString(16)}}})} disabled={buyBUSD || error?true:false}>{tab} FINO NOW </button>
                                 </Col>
                             </Row>
                         )}
