@@ -42,7 +42,7 @@ function App() {
                     <Nav className="me-auto">
                       <Nav.Link href="/">$00.25</Nav.Link>
 
-                      <Nav.Link className="wallet" onClick={() => user?logout():setShow(true)}>{user?'0x…' + user.id.slice(user.id.length-5,user.id.length-1):'Connect wallet'}</Nav.Link>
+                      <Nav.Link className="wallet" onClick={() => user?logout():setShow(true)}>{user?'0x…' + account?.slice(account?.length-4,account?.length):'Connect wallet'}</Nav.Link>
                     </Nav>
                   </Navbar.Collapse>
                 </Container>
