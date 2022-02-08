@@ -94,6 +94,9 @@ html, body{
   font-weight: 400;
   font-size: 14px;
 }
+.left-nav ul li a.active {
+  color: #4faba2;
+}
 .left-nav ul li a i{
   margin-right: 8px;
 }
@@ -123,7 +126,7 @@ html, body{
   padding: 8px 13px;
   border-radius: 7px;
   margin-top: 10px;
-  color: #5e5858;
+  color: #D0DCE8;
 }
 
 .staking-wrap {
@@ -132,7 +135,7 @@ html, body{
 }
 .staking-wrap h2{
   font-size: 14px;
-  color: #4a5460;
+  color: #D0DCE8B2;
   font-weight: 700;
 }
 .market-cap-statistic-wrapper {
@@ -179,7 +182,7 @@ html, body{
 .calculator-box h3 {
   font-size: 14px;
   text-align: center;
-  color: #595f64;
+  color: #D0DCE8B2;
 }
 .returns {
   border: 1px solid #323a40;
@@ -214,7 +217,7 @@ html, body{
   display: flex;
   background: #1c2124;
   margin-top: 5px;
-  color: #384146;
+  color: #D0DCE8;
   font-size: 12px;
   justify-content: space-between;
   padding: 8px;
@@ -237,7 +240,7 @@ span.active {
 p.rwt {
   font-size: 12px;
   /* margin: 0; */
-  color: #4c4b4b;
+  color: #D0DCE8B2;
   margin-top: 4px;
 }
 .bh-bt{
@@ -284,6 +287,15 @@ p.rwt {
 .mainWrap{
   height: 100vh;
 }
+}
+
+@media(min-width:767px){
+  /* .body-content{
+  height: 100%;
+  } */
+  .modal-content {
+  margin-left: 30rem !important;
+  }
 }
 
 .wallet{
@@ -363,16 +375,16 @@ p.rwt {
   --bs-bg-opacity: 0.5 !important;
 }
 .table-dark{
-  color: #373b3e !important;
+  color: #D0DCE8 !important;
 }
 .staking-table th {
   font-weight: 500;
   font-size: 14px;
-  color: #51565e;
+  color: #D0DCE8;
 }
 .table-striped>tbody>tr:nth-of-type(odd)>*{
-  color: #4f5462 !important;
+  color: #D0DCE8 !important;
 }
 .table-hover>tbody>tr:hover>*{
-  color: #4f5462 !important;
+  color: #D0DCE8 !important;
 }
