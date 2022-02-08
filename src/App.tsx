@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   Row,
@@ -21,9 +21,12 @@ import Presale from "./components/presale";
 
 function App() {
   
-  const { authenticate, isAuthenticated, user, logout } = useMoralis();
+  const { enableWeb3, authenticate, isAuthenticated, user, logout } = useMoralis();
   const { switchNetwork, chainId, chain, account } = useChain();
   const [show, setShow] = useState(false);
+  useEffect(()=>{
+    enableWeb3();
+  },[])
   return (
     <>
     <div className="mainWrap">
