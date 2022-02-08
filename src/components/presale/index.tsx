@@ -50,7 +50,7 @@ export default function Presale() {
                 <div className="calculator-box">
                     <div className="tab__typecontent">
                         <div className="tab__form" style={{marginBottom: "5px"}}>
-                            Balance: {chan=='BNB' ? balance.formatted: BUSD && parseInt(JSON.parse(JSON.stringify(BUSD)).hex,16)}
+                            Balance: {chan=='BNB' ? balance.formatted: BUSD && parseInt(JSON.parse(JSON.stringify(BUSD)).hex,16)/Math.pow(10,18)}
                             <div className="form__entry">
                                 <input type="text" defaultValue="0" onChange={(e: any)=>setBal(e.target.value)}/>
                                     <div className="wrapper__coin">
