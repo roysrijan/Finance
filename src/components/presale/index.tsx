@@ -97,7 +97,7 @@ export default function Presale() {
                         {chan=='BUSD' && (
                             <Row>
                                 <Col lg="6">
-                                <button id="affiliate-download" className="cta__btn" onClick={()=>fetch({params: {...optionsBUSD, params: {spender: '0x8623921f691844402f76EbD693e9c1635ec717fB', amount: (bal*Math.pow(10,18)).toString()}}})} disabled={isFetching}> Approve </button>
+                                <button id="affiliate-download" className="cta__btn" onClick={()=>fetch({params: {...optionsBUSD, params: {spender: '0xa0306eBD387933D8B5CaC92F0c020a6bF545345A', amount: (bal*Math.pow(10,18)).toString()}}})} disabled={isFetching}> Approve </button>
                                 </Col>
                                 <Col lg="6">
                                 <button id="affiliate-download" className="cta__btn" onClick={()=>fetch({params: {...optionsBUYBUSD, params: { _busdAmount: (bal*Math.pow(10,18)).toString()}}})} disabled={isFetching}>{tab} FINO NOW </button>
