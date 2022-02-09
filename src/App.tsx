@@ -39,7 +39,7 @@ function App() {
         <Container fluid>
           <Row>
             <Col lg="12">
-              <Navbar expand="lg" fixed="top">
+              <Navbar bg="dark" expand="lg" fixed="top">
                 <Container fluid>
                   <Navbar.Brand href="/">
                     <img src={logo} style={{"width": "100px", height: "30px"}} alt="" />
