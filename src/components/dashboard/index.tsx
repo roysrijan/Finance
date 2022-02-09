@@ -1,5 +1,6 @@
 import { Col, Button, Table } from 'react-bootstrap';
-
+import calculatorIcon from "../../img/calculator.png";
+import kone from "../../img/kone.png";
 export default function Dashboard() {
     return (
         <>
@@ -19,7 +20,9 @@ export default function Dashboard() {
                                 <i className="fa fa-area-chart" aria-hidden="true"></i>
                                 <p>APY statistic</p>
                             </span>
-                            <div className="box">45852.22%</div>
+                            <div className="box">45852.22%
+                            <img src={kone} style={{"width": "20px", height: "21px"}} alt="" />
+                            </div>
                         </div>
 
                         <div className="market-cap-option">
@@ -96,7 +99,7 @@ export default function Dashboard() {
 
             <Col lg="3">
                 <div className="calculator">
-                    <h2>calculator</h2>
+                    <h2> <img src={calculatorIcon} style={{"width": "20px", height: "21px"}} alt="" />calculator</h2>
                     <div className="calculator-box">
                         <h3>Estimate your returns</h3>
                         <input type="text" className="returns" />
@@ -114,7 +117,7 @@ export default function Dashboard() {
                         </div>
                         <div className="bal-box-g">
                             <h4>$Total USD balance</h4>
-                            <h5>55,856,56,61.56</h5>
+                            <h5 className='totalBal'>55,856,56,61.56</h5>
                         </div>
                         <p className="rwt">Vivamus suscipit tortor eget felis porttitor volutpa</p>
                         <div className="fgh"><Button variant="secondary" size="sm" className="bh-bt">Suscipit Tortor</Button></div>
