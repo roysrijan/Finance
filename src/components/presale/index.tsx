@@ -68,19 +68,27 @@ export default function Presale() {
             //console.log(res.data);
           };
           const getweiBUSD = async () => {
-            await enableWeb3();
-            let res: any = await fetchweiBUSD({params: optionsweiBUSD});
-            let res1: any = await fetchweiBNB({params: optionsweiBNB});
             let res2: any = await fetchtoken({params: {...optionstoken, params: { _userAddress: account}}});
             let res4: any = await contract.methods.contributionsInBUSD(account).call();
             setconBUSD(res4);
             let res5: any = await contract.methods.contributionsInBNB(account).call();
             setconBNB(res5);
           };
+          const getwei = async () => {
+            await enableWeb3();
+            let res: any = await fetchweiBUSD({params: optionsweiBUSD});
+            let res1: any = await fetchweiBNB({params: optionsweiBNB});
+          }
+          useEffect(()=>{
+              getwei();
+          },[])
     return (
         <>
 
         <Col lg="5">
+            <br />
+            {weiBUSD && (<><span style={{color: 'ActiveCaption'}}>Total BUSD raised: {(parseInt(JSON.parse(JSON.stringify(weiBUSD)).hex,16)/Math.pow(10,18)).toFixed(2)}</span></>)}                
+            {window.innerWidth <726 && weiBNB && (<><br /><span style={{color: 'ActiveCaption'}}>Total BNB raised: {(parseInt(JSON.parse(JSON.stringify(weiBNB)).hex,16)/Math.pow(10,18)).toFixed(2)}</span><br /></>)}                
             <div className="presale">
                 {/* <div className="buy__tab">
 
@@ -161,10 +169,10 @@ export default function Presale() {
             </div>
         </Col>
         <Col lg="5">
-            {!weiBNB && (<><button id="affiliate-download" className="cta__btn" style={{width: '20%', borderRadius: '50%', marginLeft: '35%'}} onClick={getweiBUSD}>Fetch </button><br /><br /></>)}
-            {weiBUSD && (<><span style={{color: 'ActiveCaption'}}>Total wei BUSD raised: {(parseInt(JSON.parse(JSON.stringify(weiBUSD)).hex,16)/Math.pow(10,18)).toFixed(2)}</span></>)}                
-            {weiBNB && (<><span style={{color: 'ActiveCaption',marginLeft:'50px'}}>Total wei BNB raised: {(parseInt(JSON.parse(JSON.stringify(weiBNB)).hex,16)/Math.pow(10,18)).toFixed(2)}</span></>)}                
-            {token && conBUSD &&
+            <br />
+            {window.innerWidth >726 && weiBNB && (<><span style={{color: 'ActiveCaption'}}>Total BNB raised: {(parseInt(JSON.parse(JSON.stringify(weiBNB)).hex,16)/Math.pow(10,18)).toFixed(2)}</span><br /></>)}                
+            {!token && (<><button id="affiliate-download" className="cta__btn" style={{width: '20%', borderRadius: '50%', marginLeft: '35%'}} onClick={getweiBUSD}>Tokens </button><br /><br /></>)}
+            {token && conBUSD && conBNB &&
             (<div className="presale">
                 {/* <div className="buy__tab">
 
@@ -176,14 +184,14 @@ export default function Presale() {
                     <div className="tab__typecontent">
                         <div className="tab__form" style={{marginBottom: "5px"}}>
                             <div className="form__entry">
-                                Contribution In BUSD: {conBUSD}
+                                Contribution In BUSD: {(parseInt(JSON.parse(JSON.stringify(conBUSD)))/Math.pow(10,18)).toFixed(2)}
                                     <div className="wrapper__coin">
                                         <div className="select_wrap">
                                             <ul className="default_option">
                                                 <li>
                                                     <div className="option pizza" style={{width: '250px'}}>
                                                         <div className="">
-                                                        Contribution In BNB: {conBNB}
+                                                        Contribution In BNB: {(parseInt(JSON.parse(JSON.stringify(conBNB)))/Math.pow(10,18)).toFixed(2)}
                                                         </div>
                                                     </div>
                                                 </li>
@@ -196,7 +204,7 @@ export default function Presale() {
 
                         </div>
                         <div className="tab__form" style={{marginBottom: "5px"}}>
-                            <p>Your Tokens</p>
+                            <p>Your Claimable Tokens</p>
                             <div className="form__entry">
                                 <input type="text" id="qttinputid" value={(parseInt(JSON.parse(JSON.stringify(token)).hex,16)/Math.pow(10,18)).toFixed(2)} readOnly/>
                                     <div className="wrapper__coin">
