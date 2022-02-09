@@ -172,7 +172,7 @@ export default function Presale() {
             <br />
             {window.innerWidth >726 && weiBNB && (<><span style={{color: 'ActiveCaption'}}>Total BNB raised: {(parseInt(JSON.parse(JSON.stringify(weiBNB)).hex,16)/Math.pow(10,18)).toFixed(2)}</span><br /></>)}                
             {!token && (<><button id="affiliate-download" className="cta__btn" style={{width: '20%', borderRadius: '50%', marginLeft: '35%'}} onClick={getweiBUSD}>Tokens </button><br /><br /></>)}
-            {token && conBUSD &&
+            {token && conBUSD && conBNB &&
             (<div className="presale">
                 {/* <div className="buy__tab">
 
@@ -184,14 +184,14 @@ export default function Presale() {
                     <div className="tab__typecontent">
                         <div className="tab__form" style={{marginBottom: "5px"}}>
                             <div className="form__entry">
-                                Contribution In BUSD: {conBUSD}
+                                Contribution In BUSD: {(parseInt(JSON.parse(JSON.stringify(conBUSD)))/Math.pow(10,18)).toFixed(2)}
                                     <div className="wrapper__coin">
                                         <div className="select_wrap">
                                             <ul className="default_option">
                                                 <li>
                                                     <div className="option pizza" style={{width: '250px'}}>
                                                         <div className="">
-                                                        Contribution In BNB: {conBNB}
+                                                        Contribution In BNB: {(parseInt(JSON.parse(JSON.stringify(conBNB)))/Math.pow(10,18)).toFixed(2)}
                                                         </div>
                                                     </div>
                                                 </li>
