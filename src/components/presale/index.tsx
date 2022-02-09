@@ -87,7 +87,8 @@ export default function Presale() {
 
         <Col lg="5">
             <br />
-            {weiBUSD && (<><span style={{color: 'ActiveCaption'}}>Total wei BUSD raised: {(parseInt(JSON.parse(JSON.stringify(weiBUSD)).hex,16)/Math.pow(10,18)).toFixed(2)}</span></>)}                
+            {weiBUSD && (<><span style={{color: 'ActiveCaption'}}>Total BUSD raised: {(parseInt(JSON.parse(JSON.stringify(weiBUSD)).hex,16)/Math.pow(10,18)).toFixed(2)}</span></>)}                
+            {window.innerWidth <726 && weiBNB && (<><br /><span style={{color: 'ActiveCaption'}}>Total BNB raised: {(parseInt(JSON.parse(JSON.stringify(weiBNB)).hex,16)/Math.pow(10,18)).toFixed(2)}</span><br /></>)}                
             <div className="presale">
                 {/* <div className="buy__tab">
 
@@ -169,7 +170,7 @@ export default function Presale() {
         </Col>
         <Col lg="5">
             <br />
-            {weiBNB && (<><span style={{color: 'ActiveCaption',marginLeft:'50px'}}>Total wei BNB raised: {(parseInt(JSON.parse(JSON.stringify(weiBNB)).hex,16)/Math.pow(10,18)).toFixed(2)}</span></>)}                
+            {window.innerWidth >726 && weiBNB && (<><span style={{color: 'ActiveCaption'}}>Total BNB raised: {(parseInt(JSON.parse(JSON.stringify(weiBNB)).hex,16)/Math.pow(10,18)).toFixed(2)}</span><br /></>)}                
             {!token && (<><button id="affiliate-download" className="cta__btn" style={{width: '20%', borderRadius: '50%', marginLeft: '35%'}} onClick={getweiBUSD}>Tokens </button><br /><br /></>)}
             {token && conBUSD &&
             (<div className="presale">
@@ -203,7 +204,7 @@ export default function Presale() {
 
                         </div>
                         <div className="tab__form" style={{marginBottom: "5px"}}>
-                            <p>Your Tokens</p>
+                            <p>Your Claimable Tokens</p>
                             <div className="form__entry">
                                 <input type="text" id="qttinputid" value={(parseInt(JSON.parse(JSON.stringify(token)).hex,16)/Math.pow(10,18)).toFixed(2)} readOnly/>
                                     <div className="wrapper__coin">
