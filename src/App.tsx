@@ -10,6 +10,11 @@ import {
   Table,
 } from "react-bootstrap";
 import logo from "./Fino_Finance_logo.png";
+import homeIcon from "./img/home.png";
+import stakeIcon from "./img/stake.png";
+import saleIcon from "./img/sale.png";
+import todoIcon from "./img/todo.png";
+import socialIcon from "./img/social.png";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -60,26 +65,26 @@ function App() {
               <div className="left-nav">
                 <ul>
                   <li>
-                    <a href="javascript:;"><i className="fa fa-home" aria-hidden="true"></i>Home</a>
+                    <a href="javascript:;">  <img src={homeIcon} style={{"width": "16px", height: "16px"}} alt="" />Home</a>
                   </li>
                   <li>
-                    <a href="javascript:;"><i className="fa fa-adjust" aria-hidden="true"></i>Stake</a>
+                    <a href="javascript:;"><img src={stakeIcon} style={{"width": "16px", height: "16px"}} alt="" />Stake</a>
                   </li>
                   <li>
-                    <a className={window.location.pathname=='/presale'?"active":""} href="/presale"><i className="fa fa-btc" aria-hidden="true"></i>Presale</a>
+                    <a className={window.location.pathname=='/presale'?"active":""} href="/presale"><img src={saleIcon} style={{"width": "16px", height: "16px"}} alt="" />Presale</a>
                   </li>
                   <li>
-                    <a href="javascript:;"><i className="fa fa-list-alt" aria-hidden="true"></i>Todo</a>
+                    <a href="javascript:;"><img src={todoIcon} style={{"width": "16px", height: "16px"}} alt="" />Todo</a>
                   </li>
                   <li>
-                    <a href="javascript:;"><i className="fa fa-share-square-o" aria-hidden="true"></i>Social</a>
+                    <a href="javascript:;"><img src={socialIcon} style={{"width": "16px", height: "16px"}} alt="" />Social</a>
                   </li>
                 </ul>
               </div>
             </Col>
             <Router>
               <Routes>
-                {/* <Route path="/" element={<Dashboard />} /> */}
+                <Route path="/" element={<Dashboard />} />
                 <Route path="/presale" element={<Presale />} />
               </Routes>
             </Router>

@@ -116,7 +116,12 @@ li {
 .default_option{
   padding: 0;
 }
-
+.navbar{
+  box-shadow:none !important
+  }
+  div.bg-dark {
+    background:none !important;
+  }
 @media(max-width:767px){
   .form__entry {
     display: flex;

@@ -83,7 +83,7 @@ html, body{
   padding: 0;
 }
 .left-nav ul li{
-  margin-bottom: 15px;
+  margin-bottom: 28px;
 }
 .left-nav ul li a{
   /* color: #706f6f; */
@@ -93,6 +93,13 @@ html, body{
   text-transform: uppercase;
   font-weight: 400;
   font-size: 14px;
+  text-shadow: 0px 0px 13px rgba(255, 255, 255, 0.79);
+}
+.left-nav ul li a img{
+  filter: invert(1);
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
 }
 .left-nav ul li a.active {
   color: #4faba2;
@@ -107,7 +114,8 @@ html, body{
 }
 .market-cap-option span{
   display: flex;
-  color: #4faba2;
+  color: #26E2B3;
+  text-shadow: 0px 0px 13px rgba(38, 226, 179, 0.79);
 }
 .market-cap-option span i{
  margin-right: 10px;
@@ -129,23 +137,37 @@ html, body{
   color: #D0DCE8;
 }
 
+.box  {
+  color: #fff;
+  border: 1px solid #13cfcf11;
+  background: #13182357;
+  box-shadow: 12px 12px 22px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  backdrop-filter: blur(15px);
+  text-align:center;
+  width:90%
+}
+.roi-val{
+  text-shadow: 0px 0px 13px rgb(38 226 179 / 79%);
+  color: #26E2B3;
+}
 .staking-wrap {
   margin-top: 25px;
  
 }
 .staking-wrap h2{
   font-size: 14px;
-  color: #D0DCE8B2;
+  color: #fff;
   font-weight: 700;
 }
 .market-cap-statistic-wrapper {
-  background: #070c1859;
+  /* background: #070c1859; */
   padding: 10px;
   margin-top: 26px;
   border-radius: 8px;
-  border: 1px solid rgba(19,207,207,.06666666666666667);
+  /* border: 1px solid rgba(19,207,207,.06666666666666667); */
   min-height: 397px;
-  background: rgba(19,24,35,.3411764705882353);
+  /* background: rgba(19,24,35,.3411764705882353); */
 }
 .staking-table th{
   font-weight: 500;
@@ -167,17 +189,33 @@ html, body{
 }
 
 .calculator {
-  background: #13171a80;
+  margin-top:25px
+  /* background: #13171a80;
   padding: 10px;
   margin-top: 26px;
   border-radius: 8px;
-  border: 1px solid #4a515a;
+  border: 1px solid #4a515a; */
+  /* border: 1px solid rgba(19,207,207,.06666666666666667);
+  background: rgba(19,24,35,.3411764705882353);
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 10px; */
+}
+.calculator-box{
+  border: 1px solid rgba(19,207,207,.06666666666666667);
+  background: rgba(19,24,35,.3411764705882353);
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 10px;
 }
 .calculator h2 {
   color: #4faba2;
   font-size: 17px;
   margin-bottom: 19px;
   text-transform: uppercase;
+  display: flex;
+  color: #fff;
+  text-shadow: 0px 0px 13px rgba(38, 226, 179, 0.79);
 }
 .calculator-box h3 {
   font-size: 14px;
@@ -260,6 +298,45 @@ p.rwt {
   position: absolute !important;
   top: 151px !important;
   margin: 0 !important;
+}
+.staking-box{
+  border: 1px solid rgba(19,207,207,.06666666666666667);
+  background: rgba(19,24,35,.3411764705882353);
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+.top-col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(19,207,207,.06666666666666667);
+  padding-bottom: 15px;
+}
+.top-col h2{
+  margin: 0;
+
+}
+.top-col h3{
+  display: flex;
+  color: #26E2B3;
+  text-shadow: 0px 0px 13px rgba(38, 226, 179, 0.79);
+  font-size: 15px;
+  margin: 0;
+}
+.cont-col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 14px;
+}
+.navbar{
+box-shadow:none !important
+}
+div.bg-dark {
+  background:none !important;
 }
 @media(max-width:767px){
   /* .body-content{

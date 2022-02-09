@@ -33,8 +33,31 @@ export default function Dashboard() {
 
                     <div className="staking-wrap">
                         <h2>Staking statistic</h2>
-                        <div className="staking-table">
-                            <Table striped hover variant="dark">
+                        <div className="staking-box">
+                            <div className="top-col">
+                            <h2> Current APY</h2>
+                            <h3> 102 452.58%</h3>
+                            </div>
+
+                            <div className="cont-col">
+                                <span>Your wallet balance :</span>
+                                <span>0</span>
+                            </div>
+
+                            <div className="cont-col">
+                                <span>Next reward balanace :</span>
+                                <span>0</span>
+                            </div>
+                            <div className="cont-col">
+                                <span>Next reward yeild :</span>
+                                <span>0.000458%</span>
+                            </div>
+                            <div className="cont-col">
+                                <span>ROI :</span>
+                                <span className="roi-val">0.0058%</span>
+                            </div>
+
+                            {/* <Table striped hover variant="dark">
                                 <thead>
                                     <tr>
                                         <th>
@@ -65,7 +88,7 @@ export default function Dashboard() {
                                         <td>0</td>
                                     </tr>
                                 </tbody>
-                            </Table>
+                            </Table> */}
                         </div>
                     </div>
                 </div>
