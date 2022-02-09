@@ -112,7 +112,7 @@ export default function Dashboard() {
                             <span>1 Year</span>
                         </div>
                         <div className="bal-box-g">
-                            <h4>$Titano balance</h4>
+                            <h4>$Fino balance</h4>
                             <h5>55,856,56,61.56</h5>
                         </div>
                         <div className="bal-box-g">
