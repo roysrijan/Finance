@@ -68,19 +68,26 @@ export default function Presale() {
             //console.log(res.data);
           };
           const getweiBUSD = async () => {
-            await enableWeb3();
-            let res: any = await fetchweiBUSD({params: optionsweiBUSD});
-            let res1: any = await fetchweiBNB({params: optionsweiBNB});
             let res2: any = await fetchtoken({params: {...optionstoken, params: { _userAddress: account}}});
             let res4: any = await contract.methods.contributionsInBUSD(account).call();
             setconBUSD(res4);
             let res5: any = await contract.methods.contributionsInBNB(account).call();
             setconBNB(res5);
           };
+          const getwei = async () => {
+            await enableWeb3();
+            let res: any = await fetchweiBUSD({params: optionsweiBUSD});
+            let res1: any = await fetchweiBNB({params: optionsweiBNB});
+          }
+          useEffect(()=>{
+              getwei();
+          },[])
     return (
         <>
 
         <Col lg="5">
+            <br />
+            {weiBUSD && (<><span style={{color: 'ActiveCaption'}}>Total wei BUSD raised: {(parseInt(JSON.parse(JSON.stringify(weiBUSD)).hex,16)/Math.pow(10,18)).toFixed(2)}</span></>)}                
             <div className="presale">
                 {/* <div className="buy__tab">
 
@@ -161,9 +168,9 @@ export default function Presale() {
             </div>
         </Col>
         <Col lg="5">
-            {!weiBNB && (<><button id="affiliate-download" className="cta__btn" style={{width: '20%', borderRadius: '50%', marginLeft: '35%'}} onClick={getweiBUSD}>Fetch </button><br /><br /></>)}
-            {weiBUSD && (<><span style={{color: 'ActiveCaption'}}>Total wei BUSD raised: {(parseInt(JSON.parse(JSON.stringify(weiBUSD)).hex,16)/Math.pow(10,18)).toFixed(2)}</span></>)}                
+            <br />
             {weiBNB && (<><span style={{color: 'ActiveCaption',marginLeft:'50px'}}>Total wei BNB raised: {(parseInt(JSON.parse(JSON.stringify(weiBNB)).hex,16)/Math.pow(10,18)).toFixed(2)}</span></>)}                
+            {!token && (<><button id="affiliate-download" className="cta__btn" style={{width: '20%', borderRadius: '50%', marginLeft: '35%'}} onClick={getweiBUSD}>Tokens </button><br /><br /></>)}
             {token && conBUSD &&
             (<div className="presale">
                 {/* <div className="buy__tab">
