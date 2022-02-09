@@ -90,7 +90,7 @@ function App() {
             </Col>
             <Router>
               <Routes>
-                <Route path="/" element={<Dashboard />} />
+                {/* <Route path="/" element={<Dashboard />} /> */}
                 <Route path="/presale" element={<Presale />} />
               </Routes>
             </Router>
