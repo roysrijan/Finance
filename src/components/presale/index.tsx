@@ -79,13 +79,6 @@ export default function Presale() {
             await enableWeb3();
             let res: any = await fetchweiBUSD({params: optionsweiBUSD});
             let res1: any = await fetchweiBNB({params: optionsweiBNB});
-            contract1.getPastEvents('Approval', {
-                fromBlock: 15130331,
-                toBlock: 'latest'
-            }, function(error, events){ console.log(events)})
-            .then(function(events){
-                console.log(events) // same results as the optional callback above
-            });
           }
           useEffect(()=>{
               getwei();
