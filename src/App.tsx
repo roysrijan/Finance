@@ -42,7 +42,7 @@ function App() {
               <Navbar bg="dark" expand="lg" fixed="top">
                 <Container fluid>
                   <Navbar.Brand href="/">
-                    <img src={logo} style={{"width": "100px", height: "30px"}} alt="" />
+                    <img src={'https://www.fino.finance/assets/images/logo/logo.png'} style={{"width": "100px", height: "30px"}} alt="" />
                     {/* <h2 className="comname">Company name</h2> */}
                   </Navbar.Brand>
                   <Navbar.Toggle aria-controls="basic-navbar-nav" />
