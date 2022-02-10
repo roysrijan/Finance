@@ -153,12 +153,12 @@ export default function Presale() {
                             </div>
                         </div>
                         
-                        {chan=='BNB' && (<button id="affiliate-download" className="cta__btn" onClick={()=>fetch({params: {...options, msgValue:bal*Math.pow(10,18)}})} disabled={isFetching}>{tab} FINO NOW </button>
+                        {chan=='BNB' && (<button id="affiliate-download" className="cta__btn" style={{background: bal<0.05?'grey':'#28e3da'}} onClick={()=>fetch({params: {...options, msgValue:bal*Math.pow(10,18)}})} disabled={isFetching||bal<0.05}>{tab} FINO NOW </button>
                         )}
                         {chan=='BUSD' && (
                             <Row>
                                 <Col lg="6">
-                                <button id="affiliate-download" className="cta__btn" onClick={()=>{fetch({params: {...optionsBUSD, params: {spender: '0x22Ad5eB9f2fD633CEc1fE5dBe3fdD5BD34a38c54', amount: "0x"+(bal*Math.pow(10,18)).toString(16)}}});setTimeout(()=>setbuyBUSD(false),5000)}} disabled={isFetching}> Approve </button>
+                                <button id="affiliate-download" className="cta__btn" style={{background: !buyBUSD||bal<20?'grey':'#28e3da'}} onClick={()=>{fetch({params: {...optionsBUSD, params: {spender: '0x22Ad5eB9f2fD633CEc1fE5dBe3fdD5BD34a38c54', amount: "0x"+(bal*Math.pow(10,18)).toString(16)}}});setTimeout(()=>setbuyBUSD(false),12000)}} disabled={!buyBUSD||bal<20}> Approve </button>
                                 </Col>
                                 <Col lg="6">
                                 <button id="affiliate-download" className="cta__btn" style={{background: buyBUSD?'grey':'#28e3da'}} onClick={()=>fetch({params: {...optionsBUYBUSD, params: { _busdAmount: "0x"+(bal*Math.pow(10,18)).toString(16)}}})} disabled={buyBUSD}>{tab} FINO NOW </button>
