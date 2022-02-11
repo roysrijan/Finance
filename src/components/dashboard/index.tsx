@@ -88,7 +88,7 @@ export default function Dashboard() {
                                 <i className="fa fa-area-chart" aria-hidden="true"></i>
                                 <p>FINO price</p>
                             </span>
-                            {fino && (<div className="box">$0.001{/* {parseInt(JSON.parse(JSON.stringify(fino?.data?.price)))} */}
+                            {fino && (<div className="box">${parseFloat(JSON.parse(JSON.stringify(fino?.data?.price))).toFixed(5)}
                             </div>)}
                         </div>
 
