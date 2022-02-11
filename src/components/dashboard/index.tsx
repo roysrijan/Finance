@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 export default function Dashboard() {
     const [balance, setbalance] = useState<any>();
     const [fino, setfino] = useState<any>();
+    const [timer, settimer] = useState<any>();
     const { enableWeb3, Moralis, authenticate, isAuthenticated, user, logout } = useMoralis();
     const { data: rebase, fetch: fetchrebase } = useWeb3ExecuteFunction();
     const { data: supply, fetch: fetchsupply } = useWeb3ExecuteFunction();
@@ -35,7 +36,26 @@ export default function Dashboard() {
     }
     const getDashboard = async () => {
         await enableWeb3();
-        let res: any = await fetchrebase({params: options});
+        let res: any = await fetchrebase({params: options, onSuccess: (res)=>{
+            console.log(res)
+            var countDownDate = parseInt(JSON.parse(JSON.stringify(res)).hex,16);
+            var x = setInterval(function() {
+
+                // Get today's date and time
+                var now = new Date().getTime();
+                  
+                // Find the distance between now and the count down date
+                var distance = countDownDate - now;
+                  
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                settimer(hours+':'+minutes+':'+seconds);
+                
+            },1000);
+        }});
         let res1: any = await fetchsupply({params: optionsSupply});
         let res2: any = await fetchBUSD({params: {...optionsgetBUSD, params: {account : '0xd080a46a5868ce30914dfa296d8fb614cf62c8d0'}}});
         const balance = await Moralis.Web3API.account.getNativeBalance({chain:'0x38',address: '0x19da2002fd4dca51cccf024f85a1d7123e4d1f2c'});
@@ -59,7 +79,7 @@ export default function Dashboard() {
                                 <i className="fa fa-line-chart" aria-hidden="true"></i>
                                 <p>Circulating Supply</p>
                             </span>
-                            {supply && (<div className="box">{(parseInt(JSON.parse(JSON.stringify(supply)).hex,16)/Math.pow(10,18)).toFixed(2)} FINO</div>)}
+                            {supply && (<div className="box">{(parseInt(JSON.parse(JSON.stringify(supply)).hex,16)/Math.pow(10,18)).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')} FINO</div>)}
                         </div>
 
                         <div className="market-cap-option">
@@ -76,7 +96,7 @@ export default function Dashboard() {
                                 <i className="fa fa-superpowers" aria-hidden="true"></i>
                                 <p>Next rebase</p>
                             </span>
-                            {rebase && (<div className="box">{parseInt(JSON.parse(JSON.stringify(rebase)).hex,16)}</div>)}
+                            {timer && (<div className="box">{timer}</div>)}
                         </div>
                     </div>
 
@@ -88,7 +108,7 @@ export default function Dashboard() {
                                 <i className="fa fa-line-chart" aria-hidden="true"></i>
                                 <p>Total burn</p>
                             </span>
-                            {burned && (<div className="box">{(parseInt(JSON.parse(JSON.stringify(burned)).hex,16)/Math.pow(10,18)).toFixed(2)} FINO</div>)}
+                            {burned && (<div className="box">{(parseInt(JSON.parse(JSON.stringify(burned)).hex,16)/Math.pow(10,18)).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')} FINO</div>)}
                         </div>
 
                         <div className="market-cap-option">
@@ -105,7 +125,7 @@ export default function Dashboard() {
                                 <i className="fa fa-superpowers" aria-hidden="true"></i>
                                 <p>RFV Fund</p>
                             </span>
-                            {BUSD && (<div className="box">${(parseInt(JSON.parse(JSON.stringify(BUSD)).hex,16)/Math.pow(10,18)).toFixed(2)}</div>)}
+                            {BUSD && (<div className="box">${(parseInt(JSON.parse(JSON.stringify(BUSD)).hex,16)/Math.pow(10,18)).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}</div>)}
                         </div>
                     </div>
 
@@ -119,7 +139,7 @@ export default function Dashboard() {
 
                             <div className="cont-col">
                                 <span>Your wallet balance :</span>
-                                {indBal &&(<span>{(parseInt(JSON.parse(JSON.stringify(indBal)).hex,16)/Math.pow(10,18)).toFixed(2)} FINO</span>)}
+                                {indBal &&(<span>{(parseInt(JSON.parse(JSON.stringify(indBal)).hex,16)/Math.pow(10,18)).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')} FINO</span>)}
                             </div>
 
                             <div className="cont-col">
@@ -130,10 +150,10 @@ export default function Dashboard() {
                                 <span>Next reward yeild :</span>
                                 <span>0.04416667%</span>
                             </div>
-                            <div className="cont-col">
+                            {/* <div className="cont-col">
                                 <span>ROI (5-Day Rate):</span>
                                 <span className="roi-val">10.8%</span>
-                            </div>
+                            </div> */}
 
                             {/* <Table striped hover variant="dark">
                                 <thead>
