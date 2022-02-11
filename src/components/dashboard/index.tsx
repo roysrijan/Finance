@@ -40,7 +40,8 @@ export default function Dashboard() {
         let res2: any = await fetchBUSD({params: {...optionsgetBUSD, params: {account : '0xd080a46a5868ce30914dfa296d8fb614cf62c8d0'}}});
         const balance = await Moralis.Web3API.account.getNativeBalance({chain:'0x38',address: '0x19da2002fd4dca51cccf024f85a1d7123e4d1f2c'});
         setbalance(balance);
-        let res3: any = await fetchindBal({params: {...optionsgetbalance, params: {who : JSON.parse(JSON.parse(JSON.stringify(localStorage.getItem('Parse/SyEweUw8KcfjY9fBe3I7PVLrPyG7VUxDpQt2VT68/currentUser')))).ethAddress}}});
+        let currentUser = Object.keys(localStorage).filter(o=> o.includes('currentUser'))[0];
+        let res3: any = await fetchindBal({params: {...optionsgetbalance, params: {who : JSON.parse(JSON.parse(JSON.stringify(localStorage.getItem(currentUser)))).ethAddress}}});
         let res4: any = await fetch('https://api.pancakeswap.info/api/v2/tokens/0xd5aaa6f6d4a91a67ceb8c8402023bc5cb0d56729');
         setfino(await res4.json());
         let res5: any = await fetchburned({params: {...optionsgetbalance, params: {who : '0x000000000000000000000000000000000000dEaD'}}});
