@@ -38,7 +38,8 @@ export default function Dashboard() {
         await enableWeb3();
         let res: any = await fetchrebase({params: options, onSuccess: (res)=>{
             console.log(res)
-            var countDownDate = parseInt(JSON.parse(JSON.stringify(res)).hex,16);
+            var date = new Date(parseInt(JSON.parse(JSON.stringify(res)).hex,16) * 1000); // multiply by 1000 for milliseconds
+            var countDownDate = date.getTime();
             var x = setInterval(function() {
 
                 // Get today's date and time
