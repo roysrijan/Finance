@@ -144,3 +144,13 @@ li {
   font-size: 14px;
 }
 }
+
+.align-center{
+  margin-left: 35px;
+}
+
+@media(max-width:767px){
+  .align-center{
+    margin-left: 0px;
+  }
+}

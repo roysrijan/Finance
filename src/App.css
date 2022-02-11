@@ -117,7 +117,7 @@ body {
 }
 
 .left-nav ul li a.active {
-  color: #4faba2;
+  color: #F2994A;
 }
 
 .left-nav ul li a i {
@@ -132,8 +132,8 @@ body {
 
 .market-cap-option span {
   display: flex;
-  color: #26E2B3;
-  text-shadow: 0px 0px 13px rgba(38, 226, 179, 0.79);
+  color: #F2994A;
+  text-shadow: 0px 0px 13px rgba(226, 207, 38, 0.79);
 }
 
 .market-cap-option span i {
@@ -170,6 +170,13 @@ body {
   width: 90%;
   overflow: hidden;
 }
+
+@media(max-width:767px){
+  .box{
+    text-align: unset;
+  }
+}
+
 .box img{
   width: 60px !important;
   height: 53px !important;
@@ -178,8 +185,8 @@ body {
   right: -7px;
 }
 .roi-val {
-  text-shadow: 0px 0px 13px rgb(38 226 179 / 79%);
-  color: #26E2B3;
+  color: #F2994A;
+  text-shadow: 0px 0px 13px rgb(226 207 38 / 79%);
 }
 
 .staking-wrap {
@@ -248,7 +255,7 @@ body {
 }
 
 .calculator h2 {
-  color: #4faba2;
+  color: #F2994A;
   font-size: 14px;
   margin-bottom: 19px;
   text-transform: uppercase;
@@ -321,10 +328,10 @@ body {
 }
 
 span.active {
-  /* background: #4faba2; */
-  /* background: #4faba2; */
+  /* background: #F2994A; */
+  /* background: #F2994A; */
   color: #fff;
-  /* border: 1px solid #4faba2; */
+  /* border: 1px solid #F2994A; */
 }
 
 button.bh-bt.btn.btn-secondary.btn-sm {
@@ -369,8 +376,8 @@ span.active {
   color: #fff;
 }
 .bal-box-g h5.totalBal{
-  color: #26E2B3;
-  text-shadow: 0px 0px 13px rgba(38, 226, 179, 0.79);
+  color: #F2994A;
+  text-shadow: 0px 0px 13px rgba(226, 198, 38, 0.79);
 }
 p.rwt {
   font-size: 9px;
@@ -424,8 +431,8 @@ p.rwt {
 
 .top-col h3 {
   display: flex;
-  color: #26E2B3;
-  text-shadow: 0px 0px 13px rgba(38, 226, 179, 0.79);
+  color: #F2994A;
+  text-shadow: 0px 0px 13px rgb(226 207 38 / 79%);
   font-size: 15px;
   margin: 0;
 }
@@ -450,7 +457,8 @@ div.bg-dark {
   color: #020202 !important;
   border: 0;
   font-weight: 500;
-  background-color: #28E0B2;
+  background-image: linear-gradient(to right, #F2994A 0%, #F2C94C 51%, #F2994A 100%);
+  box-shadow: 12px 12px 22px rgb(0 0 0 / 25%);
 }
 @media(max-width:767px) {
 

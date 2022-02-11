@@ -64,10 +64,10 @@ function App() {
             <Col lg="2">
               <div className="left-nav">
                 <ul>
-                  {/* <li>
-                    <a href="javascript:;">  <img src={homeIcon} style={{"width": "16px", height: "16px"}} alt="" />Home</a>
-                  </li>
                   <li>
+                    <a className={window.location.pathname=='/'?"active":""} href="/">  <img src={homeIcon} style={{"width": "16px", height: "16px"}} alt="" />Home</a>
+                  </li>
+                  {/* <li>
                     <a href="javascript:;"><img src={stakeIcon} style={{"width": "16px", height: "16px"}} alt="" />Stake</a>
                   </li> */}
                   <li>
@@ -90,7 +90,7 @@ function App() {
             </Col>
             <Router>
               <Routes>
-                {/* <Route path="/" element={<Dashboard />} /> */}
+                <Route path="/" element={<Dashboard />} />
                 <Route path="/presale" element={<Presale />} />
               </Routes>
             </Router>
