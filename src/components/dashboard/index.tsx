@@ -80,7 +80,7 @@ export default function Dashboard() {
                                 <i className="fa fa-line-chart" aria-hidden="true"></i>
                                 <p>Circulating Supply</p>
                             </span>
-                            {supply && (<div className="box">{(parseInt(JSON.parse(JSON.stringify(supply)).hex,16)/Math.pow(10,18)).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')} FINO</div>)}
+                            {supply && (<div className="box">{(parseInt(JSON.parse(JSON.stringify(supply)).hex,16)/Math.pow(10,18)-3500000000).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')} FINO</div>)}
                         </div>
 
                         <div className="market-cap-option">
