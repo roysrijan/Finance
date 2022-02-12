@@ -80,7 +80,7 @@ function App() {
                     <a href="javascript:;"><img src={socialIcon} style={{"width": "16px", height: "16px"}} alt="" />Social</a>
                   </li> */}
                   <li>
-                    <a href="https://www.twitter.com/finofinance"><img src={todoIcon} style={{"width": "16px", height: "16px"}} alt="" />Twitter</a>
+                    <a href="https://www.twitter.com/Fino_DAO"><img src={todoIcon} style={{"width": "16px", height: "16px"}} alt="" />Twitter</a>
                   </li>
                   <li>
                     <a href="https://t.me/finofinance"><img src={socialIcon} style={{"width": "16px", height: "16px"}} alt="" />Telegram</a>
