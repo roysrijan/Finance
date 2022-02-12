@@ -67,6 +67,9 @@ export default function Dashboard() {
         setfino(await res4.json());
         let res5: any = await fetchburned({params: {...optionsgetbalance, params: {who : '0x000000000000000000000000000000000000dEaD'}}});
       }
+    const buyfino = () => {
+        window.open("https://pancakeswap.finance/swap?outputCurrency=0x6C9AE5d6746ee1B6bD03310079AA11d8EC409212", '_blank');
+    }
     useEffect(()=>{
         getDashboard();
     },[])
@@ -198,8 +201,8 @@ export default function Dashboard() {
                 </div>
             </Col>
 
-            {/* <Col lg="3">
-                <div className="calculator">
+            <Col lg="3">
+                {/* <div className="calculator">
                     <h2> <img src={calculatorIcon} style={{"width": "20px", height: "21px"}} alt="" />calculator</h2>
                     <div className="calculator-box">
                         <h3>Estimate your returns</h3>
@@ -219,13 +222,13 @@ export default function Dashboard() {
                         <div className="bal-box-g">
                             <h4>$Total USD balance</h4>
                             <h5 className='totalBal'>55,856,56,61.56</h5>
-                        </div>
-                        <p className="rwt">Vivamus suscipit tortor eget felis porttitor volutpa</p>
-                        <div className="fgh"><Button variant="secondary" size="sm" className="bh-bt">Suscipit Tortor</Button></div>
+                        </div>*/}
+                        <p className="rwt" style={{visibility: 'hidden'}}>Vivamus suscipit tortor eget felis porttitor volutpa</p> 
+                        <div className="fgh"><Button variant="secondary" size="sm" className="bh-bt" onClick={buyfino}>$Buy FINO</Button></div>
 
-                    </div>
-                </div>
-            </Col> */}
+                    {/* </div>
+                </div> */}
+            </Col>
         </>
     )
 }
