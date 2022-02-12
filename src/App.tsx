@@ -71,7 +71,7 @@ function App() {
                     <a href="javascript:;"><img src={stakeIcon} style={{"width": "16px", height: "16px"}} alt="" />Stake</a>
                   </li> */}
                   <li>
-                    <a className={window.location.pathname=='/presale'?"active":""} href="/presale"><img src={saleIcon} style={{"width": "16px", height: "16px"}} alt="" />Presale</a>
+                    <a className={window.location.pathname=='/presale'?"active":""} href="/presale"><img src={saleIcon} style={{"width": "16px", height: "16px"}} alt="" />Claim</a>
                   </li>
                   {/* <li>
                     <a href="javascript:;"><img src={todoIcon} style={{"width": "16px", height: "16px"}} alt="" />Todo</a>
