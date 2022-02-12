@@ -177,7 +177,7 @@ export default function Presale() {
         <Col lg="5">
             <br />
             {window.innerWidth >726 && weiBNB && (<><span style={{color: 'ActiveCaption'}}>Total BNB raised: {(parseInt(JSON.parse(JSON.stringify(weiBNB)).hex,16)/Math.pow(10,18)).toFixed(2)}</span><br /></>)}                
-            {!token && (<><button id="affiliate-download" className="cta__btn" style={{width: '20%', borderRadius: '50%', marginLeft: '35%'}} onClick={getweiBUSD}>Tokens </button><br /><br /></>)}
+            {!token && (<><button id="affiliate-download" className="cta__btn" style={{width: '20%', borderRadius: '50%', marginLeft: '35%'}} onClick={getweiBUSD}>Claim </button><br /><br /></>)}
             {token && conBUSD && conBNB &&
             (<div className="presale">
                 {/* <div className="buy__tab">
