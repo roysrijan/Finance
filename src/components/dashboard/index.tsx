@@ -156,6 +156,10 @@ export default function Dashboard() {
                                 {indBal &&(<span>{(0.04416667 * parseInt(JSON.parse(JSON.stringify(indBal)).hex,16)/Math.pow(10,20)).toFixed(4)} FINO</span>)}
                             </div>
                             <div className="cont-col">
+                                <span>Next reward amount (in USD) :</span>
+                                {fino && indBal &&(<span>${(0.0004416667 * (parseFloat(JSON.parse(JSON.stringify(fino?.data?.price))) * (parseInt(JSON.parse(JSON.stringify(indBal)).hex,16)/Math.pow(10,18)))).toFixed(4).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}</span>)}
+                            </div>
+                            <div className="cont-col">
                                 <span>Next reward yield :</span>
                                 <span>0.04416667%</span>
                             </div>
