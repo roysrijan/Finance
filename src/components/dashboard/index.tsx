@@ -61,11 +61,10 @@ export default function Dashboard() {
         let res2: any = await fetchBUSD({params: {...optionsgetBUSD, params: {account : '0x9c95f306ff6c8125d3981E7BAa194a2efd312d90'}}});
         const balance = await Moralis.Web3API.account.getNativeBalance({chain:'0x38',address: '0xDC9da08BA8F6F13866244E5395155a5b28878BB9'});
         setbalance(balance);
-        let currentUser = Object.keys(localStorage).filter(o=> o.includes('currentUser'))[0];
-        let res3: any = await fetchindBal({params: {...optionsgetbalance, params: {who : JSON.parse(JSON.parse(JSON.stringify(localStorage.getItem(currentUser)))).ethAddress}}});
         let res4: any = await fetch('https://api.pancakeswap.info/api/v2/tokens/0x6C9AE5d6746ee1B6bD03310079AA11d8EC409212');
         setfino(await res4.json());
-        let res5: any = await fetchburned({params: {...optionsgetbalance, params: {who : '0x000000000000000000000000000000000000dEaD'}}});
+        let res5: any = await fetchburned({params: {...optionsgetbalance, params: {who : '0x000000000000000000000000000000000000dEaD'}}});        let currentUser = Object.keys(localStorage).filter(o=> o.includes('currentUser'))[0];
+        let res3: any = await fetchindBal({params: {...optionsgetbalance, params: {who : JSON.parse(JSON.parse(JSON.stringify(localStorage.getItem(currentUser)))).ethAddress}}});
       }
     const buyfino = () => {
         window.open("https://pancakeswap.finance/swap?outputCurrency=0x6C9AE5d6746ee1B6bD03310079AA11d8EC409212", '_blank');
