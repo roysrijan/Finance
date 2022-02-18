@@ -41,7 +41,7 @@ export default function Dashboard() {
         contractAddress: '0x6C9AE5d6746ee1B6bD03310079AA11d8EC409212',
         functionName: "balanceOf"
     }
-    const getDashboard = async () => {
+    const getRebase = async () => {
         await enableWeb3();
         let res: any = await Moralis.Web3API.native.runContractFunction({...options, chain: '0x38'});
             console.log(res)
@@ -63,14 +63,29 @@ export default function Dashboard() {
                 settimer(distance > 0 ? hours+':'+minutes+':'+seconds: '00:00:00');
                 
             },1000);
+        }
+    const getSupply = async () => {    
+        await enableWeb3();
         let res1: any = await Moralis.Web3API.native.runContractFunction({...optionsSupply, chain:'0x38'})//fetchsupply({params: optionsSupply});
         setsupply(res1);
+        }
+    const getBUSD = async () => {
+        await enableWeb3();
         let res2: any = await Moralis.Web3API.native.runContractFunction({...optionsgetBUSD, chain:'0x38'});
         setBUSD(res2);
+        }
+    const getTreasuryFund = async () => {
+        await enableWeb3();
         const balance = await Moralis.Web3API.account.getNativeBalance({chain:'0x38',address: '0xDC9da08BA8F6F13866244E5395155a5b28878BB9'});
         setbalance(balance);
+        }
+    const getFino = async () =>{
+        await enableWeb3();
         let res4: any = await fetch('https://api.pancakeswap.info/api/v2/tokens/0x6C9AE5d6746ee1B6bD03310079AA11d8EC409212');
         setfino(await res4.json());
+        }
+    const getBurned = async () => {
+        await enableWeb3();
         let res5: any = await Moralis.Web3API.native.runContractFunction({...optionsgetburned, chain:'0x38'});  
         setburned(res5);      
         let currentUser = Object.keys(localStorage).filter(o=> o.includes('currentUser'))[0];
@@ -80,7 +95,12 @@ export default function Dashboard() {
         window.open("https://pancakeswap.finance/swap?outputCurrency=0x6C9AE5d6746ee1B6bD03310079AA11d8EC409212", '_blank');
     }
     useEffect(()=>{
-        getDashboard();
+        getRebase();
+        getSupply();
+        getBUSD();
+        getFino();
+        getTreasuryFund();
+        getBurned();
     },[user])
     return (
         <>
