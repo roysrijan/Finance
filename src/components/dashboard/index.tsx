@@ -81,7 +81,7 @@ export default function Dashboard() {
         }
     const getFino = async () =>{
         await enableWeb3();
-        let res4: any = await fetch('https://api.pancakeswap.info/api/v2/tokens/0x6C9AE5d6746ee1B6bD03310079AA11d8EC409212');
+        let res4: any = await fetch('https://api.coinmarketcap.com/data-api/v3/cryptocurrency/market-pairs/latest?slug=fino-dao&start=1&limit=6&category=spot&sort=cmc_rank_advanced');
         setfino(await res4.json());
         }
     const getBurned = async () => {
@@ -120,7 +120,7 @@ export default function Dashboard() {
                                 <i className="fa fa-area-chart" aria-hidden="true"></i>
                                 <p>FINO price</p>
                             </span>
-                            {fino && (<div className="box">${parseFloat(JSON.parse(JSON.stringify(fino?.data?.price))).toFixed(5)}
+                            {fino && (<div className="box">${parseFloat(JSON.parse(JSON.stringify(fino?.data?.marketPairs[0]?.price))).toFixed(5)}
                             </div>)}
                         </div>
 
