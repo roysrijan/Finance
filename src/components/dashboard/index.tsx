@@ -177,7 +177,7 @@ export default function Dashboard() {
 
                             <div className="cont-col">
                                 <span>Your wallet balance (in USD) :</span>
-                                {fino && indBal &&(<span>${(parseFloat(JSON.parse(JSON.stringify(fino?.data?.price))) * (parseInt(JSON.parse(JSON.stringify(indBal)).hex,16)/Math.pow(10,18))).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}</span>)}
+                                {fino && indBal &&(<span>${(parseFloat(JSON.parse(JSON.stringify(fino?.data?.marketPairs[0]?.price))) * (parseInt(JSON.parse(JSON.stringify(indBal)).hex,16)/Math.pow(10,18))).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}</span>)}
                             </div>
 
                             <div className="cont-col">
@@ -186,7 +186,7 @@ export default function Dashboard() {
                             </div>
                             <div className="cont-col">
                                 <span>Next reward amount (in USD) :</span>
-                                {fino && indBal &&(<span>${(0.0004416667 * (parseFloat(JSON.parse(JSON.stringify(fino?.data?.price))) * (parseInt(JSON.parse(JSON.stringify(indBal)).hex,16)/Math.pow(10,18)))).toFixed(4)}</span>)}
+                                {fino && indBal &&(<span>${(0.0004416667 * (parseFloat(JSON.parse(JSON.stringify(fino?.data?.marketPairs[0]?.price))) * (parseInt(JSON.parse(JSON.stringify(indBal)).hex,16)/Math.pow(10,18)))).toFixed(4)}</span>)}
                             </div>
                             <div className="cont-col">
                                 <span>Next reward yield :</span>
