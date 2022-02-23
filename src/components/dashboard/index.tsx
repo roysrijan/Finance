@@ -60,8 +60,10 @@ export default function Dashboard() {
                 var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                settimer(distance > 0 ? hours+':'+minutes+':'+seconds: '00:00:00');
-                
+                if(distance<0)
+                clearInterval(x);
+                settimer(distance > 0 ? hours+':'+minutes+':'+seconds: '0:0:0');
+                                
             },1000);
         }
     const getSupply = async () => {    
@@ -101,6 +103,15 @@ export default function Dashboard() {
         getFino();
         getTreasuryFund();
         getBurned();
+
+        setInterval(()=>{
+            getRebase();
+            getSupply();
+            getBUSD();
+            getFino();
+            getTreasuryFund();
+            getBurned();
+        },30000)
     },[user])
     return (
         <>
