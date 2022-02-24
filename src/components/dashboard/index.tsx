@@ -104,14 +104,14 @@ export default function Dashboard() {
         getTreasuryFund();
         getBurned();
 
-        setInterval(()=>{
+        /* setInterval(()=>{
             getRebase();
             getSupply();
             getBUSD();
             getFino();
             getTreasuryFund();
             getBurned();
-        },30000)
+        },30000) */
     },[user])
     return (
         <>
