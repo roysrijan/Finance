@@ -42,7 +42,7 @@ function App() {
               <Navbar bg="dark" expand="lg" fixed="top">
                 <Container fluid>
                   <Navbar.Brand href="/">
-                    <img src={'https://www.finodao.com/assets/images/logo/logo.png'} style={{"width": "100px", height: "30px"}} alt="" />
+                    <img src={'https://origi-main.d2s780g3mqldmb.amplifyapp.com/static/media/logo.7b2a5b2020a9d8032719.png'} style={{"width": "100px", height: "30px"}} alt="" />
                     {/* <h2 className="comname">Company name</h2> */}
                   </Navbar.Brand>
                   <Navbar.Toggle aria-controls="basic-navbar-nav" />
